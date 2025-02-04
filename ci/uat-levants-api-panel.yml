@@ -1,0 +1,37 @@
+projectKind: "front"
+envAsFile:
+  enabled: false
+  path: /usr/src/app/.env
+
+command: "npm"
+
+extraArg:
+  - "run"
+  - "start"
+
+metrics:
+  jmx:
+    enabled: false
+
+service:
+  port: 3000
+
+extraConfig:
+  BUILD_ENV: UAT
+  DOMAINNAME: kian.digital
+  SERVER_ADDRESS: "https://uat.kian.digital/api-channel/v1/report"
+  SERVER_FILE: "https://uat.kian.digital/api-channel/v1/admin"
+  SERVER_MESSAGE: "https://uat.kian.digital/api-channel/v1/"
+  AUTH_BASEURL: "https://uat.neshanid.com/auth/realms/KIAN/protocol/openid-connect"
+  VIDEO_WIDTH_SIZE: 640
+  VIDEO_HEIGHT_SIZE: 480
+  VIDEO_FRAME_RATE: 24
+
+ingress:
+  hosts:
+    - domain: apipanel.uat.kian.digital
+      defaultSubdomains: false
+      tls:
+        enabled: true
+      paths:
+        - /?(.*)

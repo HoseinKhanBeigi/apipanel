@@ -1,0 +1,93 @@
+projectKind: "front"
+envAsFile:
+  enabled: false
+  path: /usr/src/app/.env
+
+command: "npm"
+
+extraArg:
+  - "run"
+  - "start"
+
+metrics:
+  jmx:
+    enabled: false
+
+service:
+  port: 3000
+
+extraConfig:
+  BUILD_ENV: PROD
+  AUTH_BASEURL: https://neshanid.com/auth/realms/KIAN/protocol/openid-connect
+  VIDEO_WIDTH_SIZE: 640
+  VIDEO_HEIGHT_SIZE: 480
+  VIDEO_FRAME_RATE: 24
+
+ingress:
+  hosts:
+    - domain: levant.apipanel.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: false
+      paths:
+        - /?(.*)
+    - domain: faraboom.apipanel.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: false
+      paths:
+        - /?(.*)
+    - domain: gareno.apipanel.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: false
+      paths:
+        - /?(.*)
+    - domain: hasin.apipanel.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: false
+      paths:
+        - /?(.*)
+    - domain: iransign.apipanel.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: false
+      paths:
+        - /?(.*)
+    - domain: irimc.apipanel.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: false
+      paths:
+        - /?(.*)
+    - domain: mabnacard.apipanel.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: false
+      paths:
+        - /?(.*)
+    - domain: radin.apipanel.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: false
+      paths:
+        - /?(.*)
+    - domain: sandbod.apipanel.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: false
+      paths:
+        - /?(.*)
+    - domain: vandar.apipanel.levants.io
+      defaultSubdomains: false
+      tls:
+        enabled: false
+      paths:
+        - /?(.*)
+
+env:
+  SERVER_ADDRESS: "https://api.kiandigital.com/api-channel/v1/report"
+  SERVER_FILE: "https://api.kiandigital.com/api-channel/v1/admin"
+  SERVER_MESSAGE: "https://api.kiandigital.com/api-channel/v1/"
+  AUTH_BASEURL: "https://neshanid.com/auth/realms/KIAN/protocol/openid-connect"

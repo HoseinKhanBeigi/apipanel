@@ -1,0 +1,36 @@
+projectKind: "front"
+envAsFile:
+  enabled: false
+  path: /usr/src/app/.env
+
+command: "npm"
+
+extraArg:
+  - "run"
+  - "start"
+
+metrics:
+  jmx:
+    enabled: false
+
+service:
+  port: 3000
+
+extraConfig:
+  BUILD_ENV: sit
+  DOMAINNAME: kian.digital
+  SERVER_ADDRESS: "https://sit.kian.digital/api-channel/v1/report"
+  SERVER_FILE: "https://sit.kian.digital/api-channel/v1/admin"
+  AUTH_BASEURL: https://sit.neshanid.com/auth/realms/KIAN/protocol/openid-connect22
+  VIDEO_WIDTH_SIZE: 640
+  VIDEO_HEIGHT_SIZE: 480
+  VIDEO_FRAME_RATE: 24
+
+ingress:
+  hosts:
+    - domain: apipanel.sit.kian.digital
+      defaultSubdomains: false
+      tls:
+        enabled: true
+      paths:
+        - /?(.*)
