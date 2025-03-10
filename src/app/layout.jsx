@@ -1,4 +1,4 @@
-"use client";
+"use client"; // ✅ Correct directive
 
 import { Providers } from "./GlobalRedux/Provider/Provider";
 import { CacheProvider } from "@emotion/react";

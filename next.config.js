@@ -8,7 +8,7 @@ const environments = {
     AUTH_BASEURL: "https://neshanid.com/auth/realms/KIAN/protocol/openid-connect",
   },
   UAT: {
-    SERVER_ADDRESS: "https://uat.kian.digital/api-channel/v1/report",
+    // SERVER_ADDRESS: "https://uat.kian.digital/api-channel/v1/report",
     SERVER_FILE: "https://uat.kian.digital/api-channel/v1/admin",
     SERVER_MESSAGE: "https://uat.kian.digital/api-channel/v1/",
     AUTH_BASEURL: "https://uat.neshanid.com/auth/realms/KIAN/protocol/openid-connect",

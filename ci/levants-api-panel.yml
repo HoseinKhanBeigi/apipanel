@@ -86,8 +86,3 @@ ingress:
       paths:
         - /?(.*)
 
-env:
-  SERVER_ADDRESS: "https://api.kiandigital.com/api-channel/v1/report"
-  SERVER_FILE: "https://api.kiandigital.com/api-channel/v1/admin"
-  SERVER_MESSAGE: "https://api.kiandigital.com/api-channel/v1/"
-  AUTH_BASEURL: "https://neshanid.com/auth/realms/KIAN/protocol/openid-connect"
